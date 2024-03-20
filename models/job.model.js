@@ -37,7 +37,7 @@ const jobSchema = new mongoose.Schema({
         type: Array,
         required: true,
     },
-    refUSerId: {
+    refUserId: {
         type: mongoose.ObjectId
     },
 }, { timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" } });

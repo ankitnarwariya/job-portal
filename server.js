@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth.route");
+const jobRoute = require("./routes/job.route");
 
 const app = express();
 app.use(express.json())
@@ -19,6 +20,7 @@ app.get("/api/", (req, res) => {
 
 
 app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/job", jobRoute);
 
 app.listen(PORT, () => {
     try {

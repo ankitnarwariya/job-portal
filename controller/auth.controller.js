@@ -67,7 +67,7 @@ const loginUser = async (req, res) => {
             });
         }
 
-        const token = jwt.sign({ userId: userDetails._id, userName: userDetails.name }, secretKey, { expiresIn: 30 });
+        const token = jwt.sign({ userId: userDetails._id, userName: userDetails.name }, secretKey, { expiresIn: "120h" });
 
 
         res.json({

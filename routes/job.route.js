@@ -1,5 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const jobController = ("../controller/job.controller")
+const jobController = require("../controller/job.controller");
+const verifyToken = require("../middleware/verifyToken")
 
-router.post('/job/create', jobController.createJobPost)
+router.post('/create', verifyToken, jobController.createJobPost);
+router.get('/job-details/:jobId', jobController.getJobDetailsById);
+
+
+module.exports = router;
