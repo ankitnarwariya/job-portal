@@ -1,0 +1,88 @@
+.register-container {
+  display: flex;
+  height: 100%;
+}
+
+.register-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.register-title {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.register-title p {
+  font-size: small;
+}
+
+span.error {
+  font-size: small;
+  color: red;
+  margin: 0 25px;
+  display: block;
+}
+
+.register-right {
+  flex: 1;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-input {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.register-checkbox-label {
+  margin-left: 15px;
+  font-size: small;
+}
+
+.register-button {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #ed5353;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 15px 0px;
+  display: block;
+}
+
+.logIn-link {
+  color: #ed5353;
+  text-decoration: none;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .register-right {
+    display: none;
+  }
+
+  .register-left,
+  .register-right {
+    padding: 10px;
+  }
+}
